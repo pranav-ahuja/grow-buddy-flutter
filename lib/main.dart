@@ -4,12 +4,12 @@ import 'package:growbuddy/Utility/functions.dart';
 import 'package:growbuddy/screens/login_screen.dart';
 
 void main() {
-  runApp(const GrowBuddy());
+  runApp(GrowBuddy());
   WidgetsFlutterBinding.ensureInitialized();
 }
 
 class GrowBuddy extends StatelessWidget {
-  const GrowBuddy({super.key});
+  GrowBuddy({super.key});
 
   @override
   Widget build(BuildContext context) {

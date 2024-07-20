@@ -27,3 +27,5 @@ const double kSearchBarPadding = 10.0;
 const String kEmptyRegisterFieldError = "One or more fields are empty";
 
 DateTime kPresentDate = DateTime.now();
+
+late String kTokenValue;

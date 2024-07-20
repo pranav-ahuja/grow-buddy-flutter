@@ -120,3 +120,23 @@ AppBar buildAppBar(Color iconsColor, double iconSize, String appBarText) {
     ),
   );
 }
+
+//3) To show error when the fields are empty
+void showError(context, String errorMessage) {
+  showDialog(
+      context: context,
+      builder: (context) {
+        Future.delayed(const Duration(seconds: 1), () {
+          Navigator.of(context).pop();
+        });
+        return AlertDialog(
+          title: Text(
+            errorMessage,
+            style: TextStyle(
+              fontSize: 15.0,
+              color: Colors.red,
+            ),
+          ),
+        );
+      });
+}

@@ -6,8 +6,9 @@ import 'package:growbuddy/screens/register_student.dart';
 import 'package:growbuddy/Utility/drawer.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  HomePage({super.key, this.name = "Shikha Ahuja"});
 
+  String name;
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -17,7 +18,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: NavDrawer(),
+        drawer: NavDrawer(
+          fullName: widget.name,
+        ),
         appBar: buildAppBar(kPrimaryColor1, kAppbarIconSize, "Grow Buddy"),
         body: Center(
           child: Column(

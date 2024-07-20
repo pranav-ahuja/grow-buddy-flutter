@@ -203,23 +203,7 @@ class _RegistrationState extends State<Registration> {
                       guardianName == "" ||
                       guardianContact == "" ||
                       address == "") {
-                    showDialog(
-                      context: context,
-                      builder: (context) {
-                        Future.delayed(const Duration(seconds: 1), () {
-                          Navigator.of(context).pop();
-                        });
-                        return AlertDialog(
-                          title: Text(
-                            kEmptyRegisterFieldError,
-                            style: TextStyle(
-                              fontSize: 15.0,
-                              color: Colors.red,
-                            ),
-                          ),
-                        );
-                      },
-                    );
+                    showError(context, kEmptyRegisterFieldError);
                   } else {
                     Navigator.push(
                       context,

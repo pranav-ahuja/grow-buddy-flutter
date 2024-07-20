@@ -3,11 +3,15 @@ import 'package:growbuddy/constant.dart';
 import 'package:growbuddy/Utility/drawer_icons.dart';
 import 'package:growbuddy/screens/DrawerIcons/attendance.dart';
 import 'package:growbuddy/screens/DrawerIcons/send_updates.dart';
+import 'package:growbuddy/screens/DrawerIcons/fees_update.dart';
 
 class NavDrawer extends StatelessWidget {
   const NavDrawer({
     super.key,
+    required this.fullName,
   });
+
+  final String fullName;
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +21,12 @@ class NavDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const DrawerHeader(
+          DrawerHeader(
             decoration: BoxDecoration(
               color: kPrimaryColor2,
             ),
             child: Text(
-              "Shikha Ahuja",
+              fullName,
               style: TextStyle(
                 color: kPrimaryColor1,
                 fontSize: kDrawerNameSize,
@@ -66,7 +70,7 @@ class NavDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Attendance(),
+                  builder: (context) => FeeUpdate(),
                 ),
               );
             },
